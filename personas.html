@@ -4,36 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Devotion Venture Studio — Founder Personas</title>
-  <meta name="description" content="Devotion Venture Studio accepts three founder personas for our cohorts. Growth hacker, Mgmt Consultant, and Technical Builder." />
+  <meta name="description" content="Devotion Venture Studio accepts three founder personas for our cohorts: Growth hacker, Mgmt Consultant, and Technical Builder." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <style>
+    /* Visuellt matchat mot devotionventures.com: mörk gradient, ljus text, blå accent, rundade kort med tunn border. */
     :root{
-      --bg:#0f172a;
+      --bg1:#0b1020;
+      --bg2:#050814;
       --ink:#e5e7eb;
-      --muted:#9aa2ad;
-      --card:#111827;
+      --muted:#9ca3af;
       --line:rgba(148,163,184,.25);
+      --card:#111827;
       --accent:#60a5fa;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
     body{
-      background: radial-gradient(1200px 800px at 10% 0%, #1f2937 0%, #0b1020 50%, #050814 100%);
-      color:var(--ink);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-      line-height:1.55;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:32px 16px 72px;
+      background: radial-gradient(1200px 800px at 10% 0%, #1f2937 0%, var(--bg1) 50%, var(--bg2) 100%);
+      color: var(--ink);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 32px 16px 72px;
     }
     .wrap{max-width:980px;margin:0 auto}
-    h1{font-size:clamp(28px,3vw,40px);margin:0 0 8px}
+    header.hero{
+      background: linear-gradient(180deg, rgba(96,165,250,.08), rgba(96,165,250,0));
+      border: 1px solid rgba(96,165,250,.25);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 10px 40px rgba(2,6,23,.35), inset 0 1px 0 rgba(255,255,255,.06);
+    }
+    h1{font-size:clamp(28px,3vw,40px);margin:0 0 8px;letter-spacing:-.02em}
     h2{font-size:clamp(20px,2.2vw,28px);margin:24px 0 8px}
-    p{margin:8px 0;color:var(--ink)}
+    p{margin:8px 0}
     .muted{color:var(--muted)}
+    .tagbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .tag{
+      border:1px solid var(--line);
+      background:#0b1224;
+      color:var(--ink);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      white-space:nowrap;
+    }
     .grid{display:grid;gap:16px;grid-template-columns:1fr}
-    @media (min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    @media (min-width:900px){.grid{grid-template-columns:1fr 1fr 1fr}}
     .card{
-      background:linear-gradient(180deg, rgba(17,24,39,.75), rgba(2,6,23,.7));
+      background: linear-gradient(180deg, rgba(17,24,39,.75), rgba(2,6,23,.70));
       border:1px solid var(--line);
       border-radius:16px;
       padding:20px;
@@ -48,52 +69,38 @@
       background:var(--accent);
       box-shadow:0 0 10px rgba(96,165,250,.9);
     }
-    .header{
-      background:linear-gradient(180deg, rgba(96,165,250,.08), rgba(96,165,250,0));
-      border:1px solid rgba(96,165,250,.25);
-      border-radius:20px;
-      padding:24px;
-      margin-bottom:16px;
+    .cta{
+      display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:14px
     }
-    .tagbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .tag{
-      border:1px solid var(--line);
-      background:#0b1224;
-      padding:6px 10px;
-      border-radius:999px;
-      font-size:13px;
-      white-space:nowrap;
-    }
-    a.btn{
+    .btn{
       display:inline-block;
-      margin-top:12px;
+      text-decoration:none;
       background:var(--accent);
       color:#0b1020;
-      text-decoration:none;
       font-weight:600;
       padding:12px 16px;
       border-radius:12px;
       border:1px solid rgba(255,255,255,.15);
       box-shadow:0 10px 30px rgba(96,165,250,.35);
     }
-    .footer{margin-top:18px}
+    footer{margin-top:18px;color:var(--muted);font-size:14px}
   </style>
 </head>
 <body>
   <div class="wrap">
 
-    <section class="header">
+    <header class="hero">
       <h1>Devotion Venture Studio accepts three different founder personas for our cohorts</h1>
-      <p class="muted">Pick the lane that fits you or the person you will refer.</p>
+      <p class="muted">Pick the lane that fits the person you will refer.</p>
       <div class="tagbar">
         <span class="tag">Growth hacker</span>
         <span class="tag">Mgmt Consultant</span>
         <span class="tag">Technical Builder</span>
       </div>
-    </section>
+    </header>
 
     <section class="grid">
-      <div class="card">
+      <article class="card">
         <h2>Growth hacker who can sell from scratch</h2>
         <ul>
           <li>A commercially driven person who is good at sales and understanding the customer. Has a growth journey of 0 to 20 MSEK ARR or similar in their background.</li>
@@ -101,9 +108,9 @@
           <li>Can build the first sales machine. Playbook, funnels, SDR team.</li>
           <li>Wants to be CEO slash founder and receive operational support  marketing, legal, finance  from day one.</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <h2>The Mgmt Consultant who wants to build for real</h2>
         <ul>
           <li>A person who is or recently was at McKinsey, BCG, Bain, or similar business development roles. Had enough of delivering PowerPoints for others.</li>
@@ -111,9 +118,9 @@
           <li>Wants to own their own P and L, not just analyze others.</li>
           <li>Wants to be CEO slash founder in a new company with product, customers, and team in place.</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <h2>The Technical Builder who can code V1</h2>
         <ul>
           <li>A senior developer or technical product person who has always been the engine in product building but never received the ownership they deserve.</li>
@@ -121,11 +128,11 @@
           <li>Has a high FuckQ  unshakeable conviction quotient  about their own capacity to build solutions that others say are impossible.</li>
           <li>Wants to be CEO slash founder and receive commercial support  marketing, sales, growth  from the start.</li>
         </ul>
-      </div>
+      </article>
     </section>
 
-    <section class="card">
-      <h2>What we do not look for</h2>
+    <section class="card" style="margin-top:16px">
+      <h2>What we don't look for</h2>
       <ul>
         <li><strong>The Idea Collector.</strong> Talks about ten business ideas but has never built anything all the way. Lacks focus and perseverance.</li>
         <li><strong>The Security Seeker.</strong> Wants a stable job and to avoid risk. Prefers to minimize uncertainty rather than chase growth.</li>
@@ -133,14 +140,18 @@
       </ul>
     </section>
 
-    <section class="card">
+    <section class="card" style="margin-top:16px">
       <h2>Why Devotion Venture Studio</h2>
       <p>We have founded and scaled Realforce  more than 120 MSEK ARR  and Minna Technologies  exit for 770 MSEK to Mastercard . Now we do the same journey with founders of the right caliber through Devotion Venture Studio.</p>
       <p>We only bring in a handful of founders per year. Those who join are offered capital, customers, and operational power behind them. Our model is proven. Several companies are already profitable after less than a year. This is an opportunity to build big with an unusually high probability of success.</p>
-      <div class="footer">
+      <div class="cta">
         <a class="btn" href="mailto:jonas@devotionventures.com?subject=Founder%20referral%20for%20DVS">Refer a founder</a>
       </div>
     </section>
+
+    <footer>
+      © 2025 Devotion Ventures
+    </footer>
 
   </div>
 </body>
